@@ -4,9 +4,9 @@ import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
 import Card from "./components/Card";
 import LoadingIndicator from "./components/LoadingIndicator";
+import ScrollTop from "./components/ScrollTop";
 
 import "./styles/app.scss";
-import ScrollTop from "./components/ScrollTop";
 
 export default class App extends React.Component {
   constructor(props) {
