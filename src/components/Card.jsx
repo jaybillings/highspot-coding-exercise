@@ -5,7 +5,7 @@ export default function Card(props) {
   return <div className={'card'}>
     <h2>{props.cardData.name}</h2>
     <div className={'image-container'}>
-      <img src={props.cardData.imageUrl} alt={props.cardData.name} />
+      <img src={props.cardData.imageUrl} alt={props.cardData.name} loading={'lazy'} />
     </div>
     <ul>
       <li><strong>Type:</strong>{props.cardData.type}</li>

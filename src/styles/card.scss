@@ -1,6 +1,9 @@
+@import "../styles/_variables";
+
 .card {
   display: inline-block;
-  border: 1px solid black;
+  background: $color_primary-dark;
+  border: 2px solid black;
   margin: 1rem auto;
   padding: 1rem;
 
@@ -13,7 +16,10 @@
   }
 
   h2 {
+    color: $color_primary-bright;
+    font-size: 1.75rem;
     text-align: center;
+    margin: 0.5rem auto 2rem;
   }
 
   img {

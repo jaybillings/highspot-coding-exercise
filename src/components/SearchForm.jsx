@@ -28,7 +28,7 @@ export default class SearchForm extends React.Component {
     return <div className={'search-container container'}>
       <form onSubmit={this.handleSubmit} onReset={this.handleReset}>
         <label htmlFor={'name-input'}><span className={'sr-only'}>Search cards by full or partial name:</span></label>
-        <input type={'text'} name={'name-input'} ref={this.inputRef} placeholder={'Full or partial name'} />
+        <input type={'text'} name={'name-input'} ref={this.inputRef} placeholder={'Search card names'} />
         <button type={'submit'}>Search</button>
         <button type={'reset'}>Reset Search</button>
       </form>

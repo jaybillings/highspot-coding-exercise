@@ -1,3 +1,11 @@
-header {
+@import "../styles/_variables";
+
+.main-header {
   text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: $color_primary-bright;
+  }
 }
