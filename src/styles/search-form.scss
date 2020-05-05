@@ -1,8 +1,52 @@
-.search-container {
+@import "../styles/_variables";
+
+.search-form-wrapper {
   text-align: center;
 
   label {
     display: block;
     margin: 1rem 0;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+
+    &:hover, &:focus, &:active {
+      svg {
+        color: $color_bright-red;
+      }
+    }
+
+    svg {
+      display: flex;
+      color: $color_dull-red;
+    }
+  }
+
+  .fake-input {
+    // TODO: Make accessible -- make input fill container and absolutely position buttons
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    background: $color_dull-white;
+    border: 2px solid black;
+    padding: 0.25rem;
+    box-shadow: inset 0 0 3px 2px rgba(0,0,0,0.66);
+
+    input {
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    button[type=submit] {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    button[type=reset] {
+      grid-area: 1 / 3 / 1 / 4;
+    }
   }
 }
