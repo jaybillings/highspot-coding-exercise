@@ -12,10 +12,10 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.MAX_CARD_COUNT = 5;
+    this.MAX_CARD_COUNT = 20;
     this.API_URL = 'https://api.elderscrollslegends.io/v1/cards';
 
-    this.state = {latestPage: 1, cardsData: [], nameToSearch: '', searchInProgress: false, allResultsCount: 0};
+    this.state = {latestPage: 1, cardsData: [], nameToSearch: '', searchInProgress: true, allResultsCount: 0};
 
     this.searchForTerm = this.searchForTerm.bind(this);
     this.loadMoreCards = this.loadMoreCards.bind(this);
