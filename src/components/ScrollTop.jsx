@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/scroll-top.scss";
+import { FaChevronUp } from "react-icons/fa";
 
 export default class ScrollTop extends React.Component {
   constructor(props) {
@@ -23,8 +24,9 @@ export default class ScrollTop extends React.Component {
   }
 
   render() {
-    if (!this.state.isVisible) return null;
-
-    return <button className={'scroll-top'} onClick={this.scrollToTop}><span>^</span><span>To top</span></button>
+    return <button className={`scroll-top${this.state.isVisible ? ' visible' : ''}`} title={'Scroll to top of page'} onClick={this.scrollToTop}>
+      <FaChevronUp />
+      {/*<div>To top</div>*/}
+    </button>
   }
 }

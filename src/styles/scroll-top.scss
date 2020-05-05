@@ -1,13 +1,32 @@
+@import "../styles/_variables";
+
 .scroll-top {
   position: fixed;
+  right: 0.25rem;
   bottom: 0;
-  right: 0;
-  margin: 1rem 0.25rem;
-  padding: 0.5rem 0.25rem;
-  background: rgba(255,255,255,0.5);
+  color: $color_dull-white;
+  background: rgba(0,0,0,0.5);
+  border: 0;
+  border-radius: 40px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transform: translateY(200%);
+  transition: 1s all ease-out;
 
   &:hover, &:active, &:focus {
-    background: rgba(255,255,255,1);
-    border: 1px solid yellow;
+    box-shadow: 0 0 10px 3px $color_dull-gold;
+  }
+
+  &.visible {
+    transform: translateY(-50%);
+  }
+
+  svg {
+    font-size: 1.75rem;
+  }
+
+  div {
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }
