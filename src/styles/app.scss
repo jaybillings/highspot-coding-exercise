@@ -1,0 +1,13 @@
+@import "../styles/_variables";
+
+h1, h2 {
+  font-family: $font-family_serif;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.container {
+  margin: 2rem 1rem 2.5rem;
+}
