@@ -1,11 +1,13 @@
 @import "../styles/_variables";
 
 .card {
-  display: inline-block;
-  background: $color_primary-dark;
+  min-height: 40vh;
   border: 2px solid black;
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  background: no-repeat center 35%;
+  background-clip: border-box;
+  background-size: 135%;
 
   &:first-child {
     margin-top: 0;
@@ -15,11 +17,15 @@
     margin-bottom: 0;
   }
 
+  h2, ul {
+    background: rgba(0,0,0,0.66);
+  }
+
   h2 {
-    color: $color_primary-bright;
+    padding: 0.5rem 0;
+    color: $color_bright-gold;
     font-size: 1.75rem;
     text-align: center;
-    margin: 0.5rem auto 2rem;
   }
 
   img {
@@ -32,23 +38,22 @@
   }
 
   ul {
-    margin: 1rem 0;
+    padding: 1rem;
     list-style-type: none;
     line-height: 1.5rem;
+    color: white;
   }
 
   li {
-    //margin: 0.5rem 0;
+    padding: 0.1rem 0;
   }
 
-  table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid black;
+  strong {
+    color: $color_dull-gold;
   }
 
-  th {
-    width: 25%;
+  .card-inner {
+    display: flex;
+    flex-flow: column nowrap;
   }
 }
