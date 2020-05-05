@@ -1,0 +1,26 @@
+@import "../styles/_variables";
+
+@keyframes expand-letters {
+  from {
+    letter-spacing: 0;
+  }
+  to {
+    letter-spacing: 1ch;
+  }
+}
+
+.loading-indicator {
+  display: flex;
+
+  padding: 1rem 0;
+
+  span {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    color: $color_primary-bright;
+    font-size: 0.9rem;
+    font-weight: bold;
+    animation: 1.5s ease-out 0s infinite alternate expand-letters;
+  }
+}
