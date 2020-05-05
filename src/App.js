@@ -77,7 +77,7 @@ export default class App extends React.Component {
 
   render() {
     return ([
-      <div className={'cards-layout'}>
+      <div className={'cards-layout'} key={'main-content'}>
         <Header />
         <SearchForm searchTerm={this.state.nameToSearch} resultsCount={this.state.cardsData.length}
                     allResultsCount={this.state.allResultsCount} handleSubmit={this.searchForTerm} />
@@ -86,7 +86,7 @@ export default class App extends React.Component {
           {this.state.searchInProgress ? <LoadingIndicator /> : null}
         </div>
       </div>,
-      <ScrollTop />
+      <ScrollTop key={'scroller'} />
     ]);
   }
 }

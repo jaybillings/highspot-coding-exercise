@@ -39,6 +39,10 @@
     padding: 0.25rem;
     box-shadow: inset 0 0 3px 2px rgba(0,0,0,0.66);
 
+    &:hover, &:focus, &:active, &.active {
+      box-shadow: 0 0 4px 2px $color_bright-gold;
+    }
+
     input {
       background: transparent;
       border: none;
