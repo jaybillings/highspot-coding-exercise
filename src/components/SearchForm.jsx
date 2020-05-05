@@ -32,7 +32,7 @@ export default class SearchForm extends React.Component {
           <button type={'reset'} title={'Reset search results'}><GiCancel /></button>
         </div>
       </form>
-      <p>Showing {this.props.resultsCount} cards of {this.props.allResultsCount} </p>
+      <p>Showing {this.props.resultsCount} {this.props.resultsCount === 1 ? 'card' : 'cards'} of {this.props.allResultsCount} </p>
     </div>
   }
 }

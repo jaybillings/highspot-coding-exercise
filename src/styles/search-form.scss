@@ -22,6 +22,11 @@
     svg {
       display: flex;
       color: $color_dull-red;
+      cursor: pointer;
+
+      &:hover, &:focus, &:active {
+        color: $color_bright-red;
+      }
     }
   }
 
