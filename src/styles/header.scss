@@ -4,8 +4,18 @@
   text-align: center;
 
   h1 {
-    font-size: 2rem;
-    text-transform: capitalize;
-    color: $color_primary-bright;
+    position: relative;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $color_dull-red;
+
+    &:before {
+      content: 'Elder Scrolls Legends Card Browser';
+      position: absolute;
+      left: 1%;
+      top: 1%;
+      color: $color_bright-gold;
+      z-index: 1;
+    }
   }
 }
