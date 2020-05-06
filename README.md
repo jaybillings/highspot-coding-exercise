@@ -16,6 +16,7 @@ Enjoy! :)
 * Search is triggered on submission, not as the search term changes. There is no results preview.
   * Search hints are most useful when listing links to switch context, or additive search terms, neither of which are the case here.
   * Loading each card is an involved process, and the API is open-source, so requests should be kept to a minimum.
+  * This aids accessibility, keeping context changes to a minimum.
 * Images come in various sizes, so layout centers them in the background to focus on the card image while minimizing visual differences. Multiple background layers balance text legibility and image visibility. 
 * Cards are not the same height as one another in mobile view. The reasons are as follows:
   1. Minimizing unnecessary vertical space for easier scrolling.
