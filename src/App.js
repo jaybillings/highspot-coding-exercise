@@ -1,12 +1,9 @@
 import React from 'react';
-
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
 import Card from "./components/Card";
 import LoadingIndicator from "./components/LoadingIndicator";
 import ScrollTop from "./components/ScrollTop";
-
-import "./styles/app.scss";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -42,7 +39,6 @@ export default class App extends React.Component {
           const cardsData = prevState.cardsData.concat(data.cards);
           return {cardsData, allResultsCount: data._totalCount, searchInProgress: false};
         });
-        console.info(data.cards[0]);
       });
   }
 
@@ -56,12 +52,13 @@ export default class App extends React.Component {
   }
 
   loadMoreCards() {
-    // If count is below max page #, we know there are no more cards to fetch
+    // If the number of loaded cards is equal to (or over) the total results #, there is nothing more to load
     if ((this.state.cardsData.length >= this.state.allResultsCount) || this.state.searchInProgress) return;
 
-    const triggerCardBounds = document.querySelector(".card:nth-last-of-type(2)").getBoundingClientRect();
+    const scrollTriggerCardBounds = document.querySelector(".card:nth-last-of-type(2)").getBoundingClientRect();
 
-    if (triggerCardBounds.top <= triggerCardBounds.height) {
+    // If the trigger card is visible, advance page and fetch more cards
+    if (scrollTriggerCardBounds.top <= scrollTriggerCardBounds.height) {
       this.setState(prevState => {
         return {searchInProgress: true, latestPage: prevState.latestPage + 1}
       }, () => {
@@ -73,7 +70,7 @@ export default class App extends React.Component {
   render() {
     return ([
       <div className={'cards-layout'} key={'main-content'}>
-        <Header />
+        <Header title={['Elder Scrolls Legends', 'Card Browser']} />
         <SearchForm searchTerm={this.state.nameToSearch} resultsCount={this.state.cardsData.length}
                     allResultsCount={this.state.allResultsCount} handleSubmit={this.searchForTerm} />
         <div className={'cards-list container'}>
