@@ -39,8 +39,8 @@ export default class SearchForm extends React.Component {
           <input type={'text'} name={'name-input'} ref={this.inputRef} placeholder={'Search card names'}
                  onBlur={this.handleBlur} onFocus={this.handleFocus} onClick={this.handleFocus}
                  onMouseEnter={this.handleFocus} onMouseOut={this.handleBlur} />
-          <button type={'submit'} title={'Search cards'}><FaSearch /></button>
-          <button type={'reset'} title={'Reset search results'}><GiCancel /></button>
+          <button className={'submit'} type={'submit'} title={'Search cards'}><FaSearch /></button>
+          <button className={'reset'} type={'reset'} title={'Reset search results'}><GiCancel /></button>
         </div>
       </form>
       <p>Showing {this.props.resultsCount} {this.props.resultsCount === 1 ? 'card' : 'cards'} of {this.props.allResultsCount} </p>

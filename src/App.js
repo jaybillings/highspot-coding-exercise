@@ -23,7 +23,6 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.fetchCardData();
-
     document.addEventListener("scroll", this.loadMoreCards);
   }
 
@@ -60,13 +59,9 @@ export default class App extends React.Component {
     // If count is below max page #, we know there are no more cards to fetch
     if ((this.state.cardsData.length >= this.state.allResultsCount) || this.state.searchInProgress) return;
 
-    const lastCard = document.querySelector(".card:nth-last-of-type(2)");
+    const triggerCardBounds = document.querySelector(".card:nth-last-of-type(2)").getBoundingClientRect();
 
-    //if (!lastCard) return;
-
-    const boundingRect = lastCard.getBoundingClientRect();
-
-    if (boundingRect.top <= boundingRect.height) {
+    if (triggerCardBounds.top <= triggerCardBounds.height) {
       this.setState(prevState => {
         return {searchInProgress: true, latestPage: prevState.latestPage + 1}
       }, () => {
