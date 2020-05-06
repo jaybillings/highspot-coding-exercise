@@ -1,7 +1,7 @@
 @import "../styles/_variables";
 
 .main-header {
-  margin: 3rem 0;
+  margin: 3rem 2rem;
   color: $colvar_main;
   text-align: center;
   text-transform: uppercase;
@@ -11,12 +11,19 @@
   h1 {
     div {
       margin: 0;
+    }
+    span {
+      display: inline-block;
 
       /* Text gradient -- limited support */
       @supports (background-clip: text) {
         background: $gradient_text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+
+      &:not(:first-child) {
+        margin-left: 0.75rem;
       }
     }
   }
