@@ -1,6 +1,8 @@
 {
   "short_name": "ESL Card Browser",
   "name": "Elder Scrolls Legends Card Browser",
+  "author": "Jay Billings",
+  "homepage_url": "https://github.com/jaybillings/highspot-coding-exercise",
   "icons": [
     {
       "src": "favicon.ico",

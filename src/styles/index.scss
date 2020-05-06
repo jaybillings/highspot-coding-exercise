@@ -4,10 +4,27 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  background: $color_background;
-  color: $color_dull-white;
+  background: $colvar_background;
+  color: $colvar-text;
   font-size: 16px;
   font-family: $font-family_sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2 {
+  font-family: $font-family_serif;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.cards-layout {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.container {
+  margin: 4rem 2rem;
 }

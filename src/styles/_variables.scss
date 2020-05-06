@@ -1,17 +1,28 @@
+/* Palette colors */
 $color_true-black: #000;
-$color_true-white: #fff;
 $color_coal-black: #1d1d1d;
 $color_dark-gray: #242424;
 $color_medium-gray: #525252;
+$color_dull-white: #d8d8d8;
+$color_true-white: #fff;
 $color_dull-gold: #c5ac59;
 $color_bright-gold: #f7d672;
-$color_dull-white: #d8d8d8;
+$color_dark-gold: #8c7346;
 $color_bright-red: #dd4127;
 $color_dull-red: #aa3a2e;
-$color_dark-gold: #8c7346;
 
-$color_background: $color_coal-black;
-$color-text: $color_dull-white;
+/* Functional colors */
+$colvar_background: $color_coal-black;
+$colvar-text: $color_dull-white;
+$colvar_text-emphasis: $color_true-white;
+$colvar_search-border: $color_true-black;
+$colvar_main: $color_bright-gold;
+$colvar_main-dull: $color_dull-gold;
+$colvar_alt: $color_bright-red;
+$colvar_alt-dull: $color-dull-red;
 
+$gradient_text: linear-gradient($color_bright-gold 5%, $color_dull-gold 50%, $color_dark-gold, $color_dark-gray);
+
+/* Fonts */
 $font-family_serif: 'EB Garamond', 'Times New Roman', serif;
 $font-family_sans-serif: 'Lato', Arial, sans-serif;

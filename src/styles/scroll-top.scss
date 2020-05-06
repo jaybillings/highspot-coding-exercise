@@ -4,17 +4,17 @@
   position: fixed;
   right: 0.5rem;
   bottom: 0;
-  color: $color_dull-white;
-  background: rgba(0, 0, 0, 0.5);
-  border: 0;
-  border-radius: 40px;
-  padding: 0.5rem;
-  cursor: pointer;
   transform: translateY(200%);
-  transition: 500ms all ease-out;
+  padding: 0.5rem;
+  color: $colvar_text-emphasis;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 250ms all linear;
 
   &:hover, &:active, &:focus {
-    box-shadow: 0 0 10px 3px $color_dull-gold;
+    box-shadow: 0 0 0.75rem 2px $colvar_main;
   }
 
   &.visible {

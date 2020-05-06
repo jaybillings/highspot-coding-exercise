@@ -4,14 +4,14 @@
   display: grid;
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
-  width: calc(100% - 1fr);
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: calc(100% - 1fr);
 }
 
 .card {
   display: grid;
-  border: 2px solid $color_medium-gray;
   width: 100%;
+  border: 2px solid $color_medium-gray;
   background: no-repeat center 35%;
   background-clip: border-box;
   background-size: 135%;
@@ -25,17 +25,17 @@
   }
 
   h2, ul {
-    background: rgba(0, 0, 0, 0.85);
     margin: 0 2rem;
+    background: rgba(0, 0, 0, 0.85);
   }
 
   h2 {
+    margin-top: 1rem;
     padding: 0.5rem 0;
-    color: $color_bright-gold;
+    align-self: center;
+    color: $colvar_main;
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 1rem;
-    align-self: center;
   }
 
   img {
@@ -43,17 +43,17 @@
   }
 
   strong {
-    font-weight: bold;
     margin-right: 0.5rem;
-    color: $color_dull-gold;
+    color: $colvar_main-dull;
+    font-weight: bold;
   }
 
   ul {
     margin-bottom: 1rem;
     padding: 1rem 2rem;
+    color: $colvar_text-emphasis;
     list-style-type: none;
     line-height: 1.5rem;
-    color: $color_true-white;
   }
 
   li {

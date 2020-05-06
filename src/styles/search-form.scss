@@ -15,7 +15,7 @@
 
     &:hover, &:focus, &:active {
       svg {
-        color: $color_bright-red;
+        color: $colvar_alt;
       }
     }
 
@@ -26,11 +26,11 @@
 
     svg {
       display: flex;
-      color: $color_dull-red;
+      color: $colvar_alt-dull;
       cursor: pointer;
 
       &:hover, &:focus, &:active {
-        color: $color_bright-red;
+        color: $colvar_alt;
       }
     }
   }
@@ -42,19 +42,19 @@
     margin: 0 auto;
     padding: 0.25rem;
     background: $color_dull-white;
-    border: 2px solid $color_true-black;
+    border: 2px solid $colvar_search-border;
     box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.66);
 
     &:hover, &:focus, &:active, &.active {
-      box-shadow: 0 0 7px 2px $color_bright-gold;
+      box-shadow: 0 0 7px 2px $colvar_main;
     }
 
     input {
-      background: transparent;
+      grid-area: 1 / 2 / 2 / 3;
       padding: 0.5rem 0;
+      background: transparent;
       border: none;
       font-size: 1rem;
-      grid-area: 1 / 2 / 2 / 3;
     }
 
     button.submit {
