@@ -1,12 +1,20 @@
 @import "../styles/_variables";
 
+.cards-list {
+  display: grid;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+  width: calc(100% - 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
 .card {
+  display: grid;
   border: 2px solid $color_medium-gray;
-  margin: 2rem auto;
+  width: 100%;
   background: no-repeat center 35%;
   background-clip: border-box;
   background-size: 135%;
-
 
   &:first-child {
     margin-top: 0;
@@ -17,16 +25,17 @@
   }
 
   h2, ul {
-    background: rgba(0,0,0,0.75);
-    margin: 0 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    margin: 0 2rem;
   }
 
   h2 {
     padding: 0.5rem 0;
     color: $color_bright-gold;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-top: 1rem;
+    align-self: center;
   }
 
   img {
@@ -35,29 +44,28 @@
 
   strong {
     font-weight: bold;
-    margin-right: 0.3rem;
+    margin-right: 0.5rem;
+    color: $color_dull-gold;
   }
 
   ul {
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     list-style-type: none;
     line-height: 1.5rem;
-    color: white;
+    color: $color_true-white;
   }
 
   li {
     padding: 0.1rem 0;
   }
 
-  strong {
-    color: $color_dull-gold;
-  }
-
   .card-inner {
     display: grid;
+    grid-auto-rows: minmax(100px, auto) 1fr;
     grid-gap: 2rem;
+    background: rgba(255,255,255,0.2);
     // Limited support
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 }

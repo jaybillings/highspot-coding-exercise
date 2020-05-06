@@ -78,8 +78,8 @@ export default class App extends React.Component {
                     allResultsCount={this.state.allResultsCount} handleSubmit={this.searchForTerm} />
         <div className={'cards-list container'}>
           {this.state.cardsData.map(cardData => <Card key={cardData.name} cardData={cardData} />)}
-          {this.state.searchInProgress ? <LoadingIndicator /> : null}
         </div>
+        {this.state.searchInProgress ? <LoadingIndicator /> : null}
       </div>,
       <ScrollTop key={'scroller'} />
     ]);
