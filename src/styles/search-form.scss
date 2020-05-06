@@ -47,6 +47,7 @@
 
     &:hover, &:focus, &:active, &.active {
       box-shadow: 0 0 7px 2px $colvar_main;
+      background: $color_true-white;
     }
 
     input {
