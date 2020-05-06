@@ -24,9 +24,11 @@ export default class ScrollTop extends React.Component {
   }
 
   render() {
-    return <button className={`scroll-top${this.state.isVisible ? ' visible' : ''}`} title={'Scroll to top of page'} onClick={this.scrollToTop}>
-      <FaChevronUp />
-      {/*<div>To top</div>*/}
-    </button>
+    return (
+      <button className={`scroll-top${this.state.isVisible ? ' visible' : ''}`} title={'Scroll to top of page'}
+              onClick={this.scrollToTop}>
+        <FaChevronUp />
+      </button>
+    );
   }
 }

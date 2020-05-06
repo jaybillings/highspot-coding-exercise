@@ -3,7 +3,6 @@ import "../styles/card.scss";
 
 export default function Card(props) {
   return <div className={'card'} style={{backgroundImage: `url(${props.cardData.imageUrl})`}}>
-
     <div className={'card-inner'}>
       <h2>{props.cardData.name}</h2>
       <ul>
@@ -14,7 +13,6 @@ export default function Card(props) {
         <li><strong>{props.cardData.unique ? 'Unique' : 'Not unique'}</strong></li>
         <li><strong>{props.cardData.collectible ? 'Collectible' : 'Not collectible'}</strong></li>
       </ul>
-
     </div>
   </div>
 }
