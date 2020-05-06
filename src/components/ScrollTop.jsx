@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/scroll-top.scss";
 import { FaChevronUp } from "react-icons/fa";
+import "../styles/scroll-top.scss";
 
 export default class ScrollTop extends React.Component {
   constructor(props) {
@@ -12,10 +12,20 @@ export default class ScrollTop extends React.Component {
     document.addEventListener("scroll", (e) => {
       this.toggleVisibility();
     });
+
+    // Accessibility -- if something (ex. TAB) triggers focus/blur, show/hide scrollTop
+    const scrollTop = document.querySelector(".scroll-top");
+    scrollTop.addEventListener("focus", (e) => {
+      this.toggleVisibility(true);
+    });
+    scrollTop.addEventListener("blur", (e) => {
+      this.toggleVisibility(false);
+    });
   }
 
-  toggleVisibility() {
-    if (window.pageYOffset > 300) this.setState({isVisible: true});
+  toggleVisibility(isVisible) {
+    if (typeof isVisible !== 'undefined') this.setState({isVisible});
+    else if (window.pageYOffset > 300) this.setState({isVisible: true});
     else this.setState({isVisible: false});
   }
 
